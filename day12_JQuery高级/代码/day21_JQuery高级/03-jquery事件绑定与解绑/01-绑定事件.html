@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        $(function () {
+           //1.获取name对象，绑定click事件
+           /*$("#name").click(function () {
+               alert("我被点击了...")
+           });*/
+
+           //给name绑定鼠标移动到元素之上事件。绑定鼠标移出事件
+            /*$("#name").mouseover(function () {
+               alert("鼠标来了...")
+            });
+
+            $("#name").mouseout(function () {
+                alert("鼠标走了...")
+            });*/
+
+           /* //简化操作，链式编程
+            $("#name").mouseover(function () {
+                alert("鼠标来了...")
+            }).mouseout(function () {
+                alert("鼠标走了...")
+            });*/
+            alert("我要获得焦点了...")
+            //$("#name").focus();//让文本输入框获得焦点
+            //表单对象.submit();//让表单提交
+        });
+
+
+    </script>
+</head>
+<body>
+<input id="name" type="text" value="绑定点击事件">
+</body>
+</html>

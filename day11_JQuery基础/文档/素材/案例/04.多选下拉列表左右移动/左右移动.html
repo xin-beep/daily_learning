@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script  src="../../js/jquery-3.3.1.min.js"></script>
+
+
+		<style>
+			#leftName , #btn,#rightName{
+				float: left;
+				width: 100px;
+				height: 300px;
+			}
+			#toRight,#toLeft{
+				margin-top:100px ;
+				margin-left:30px;
+				width: 50px;
+			}
+
+			.border{
+				height: 500px;
+				padding: 100px;
+			}
+		</style>
+
+		<script>
+
+			//需求：实现下拉列表选择条目左右选择功能
+
+
+		</script>
+
+
+
+	</head>
+	<body>
+		<div class="border">
+			<select id="leftName" multiple="multiple">
+				<option>张三</option>
+				<option>李四</option>
+				<option>王五</option>
+				<option>赵六</option>
+			</select>
+			<div id="btn">
+				<input type="button" id="toRight" value="-->"><br>
+				<input type="button" id="toLeft" value="<--">
+
+			</div>
+
+			<select id="rightName" multiple="multiple">
+				<option>钱七</option>
+			</select>
+
+		</div>
+
+
+	</body>
+</html>

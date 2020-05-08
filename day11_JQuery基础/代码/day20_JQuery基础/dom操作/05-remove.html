@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>删除节点</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script  src="../js/jquery-3.3.1.min.js"></script>
+	<style type="text/css">
+		 	div,span{
+			    width: 140px;
+			    height: 140px;
+			    margin: 20px;
+			    background: #9999CC;
+			    border: #000 1px solid;
+				float:left;
+			    font-size: 17px;
+			    font-family:Roman;
+			}
+			
+			div.mini{
+			    width: 30px;
+			    height: 30px;
+			    background: #CC66FF;
+			    border: #000 1px solid;
+			    font-size: 12px;
+			    font-family:Roman;
+			}
+			
+			div.visible{
+				display:none;
+			}
+	 </style>
+    <script type="text/javascript">
+	$(function () {
+        // <input type="button" value="删除<li id='bj' name='beijing'>北京</li>"  id="b1"/>
+		$("#b1").click(function () {
+			$("#bj").remove();
+        });
+        // <input type="button" value="删除city所有的li节点   清空元素中的所有后代节点(不包含属性节点)"  id="b2"/>
+        $("#b2").click(function () {
+            $("#city").empty();
+        });
+    });
+
+	
+	   
+	   
+	
+	</script>
+	</head>
+	 
+	<body>
+	<input type="button" value="删除<li id='bj' name='beijing'>北京</li>"  id="b1"/>
+	<input type="button" value="删除所有的子节点   清空元素中的所有后代节点(不包含属性节点)"  id="b2"/>
+
+		 <ul id="city">
+		 	 <li id="bj" name="beijing">北京</li>
+			 <li id="tj" name="tianjin">天津</li>
+			 <li id="cq" name="chongqing">重庆</li>
+		 </ul>
+		 <p class="hello">Hello</p> how are <p>you?</p> 
+	</body>
+	
+	
+   
+</html>
+
+
+

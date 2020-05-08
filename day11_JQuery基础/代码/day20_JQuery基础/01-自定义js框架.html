@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义js框架</title>
+    <script src="js/itcast.js"></script>
+</head>
+<body>
+
+    <div id="div1">div1....</div>
+    <div id="div2">div2....</div>
+
+
+
+<script>
+    //1. 根据id获取元素对象
+    //var div1 = document.getElementById("div1");
+    //var div2 = document.getElementById("div2");
+    var div1 = $("div1");
+    var div2 = $("div2");
+    //2.获取标签体内容
+    alert(div1.innerHTML);
+    alert(div2.innerHTML);
+
+
+
+
+</script>
+
+</body>
+</html>

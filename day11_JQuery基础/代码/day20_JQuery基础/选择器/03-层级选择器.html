@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>层次选择器</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script  src="../js/jquery-3.3.1.min.js"></script>
+	<style type="text/css">
+		 	div,span{
+			    width: 180px;
+			    height: 180px;
+			    margin: 20px;
+			    background: #9999CC;
+			    border: #000 1px solid;
+				float:left;
+			    font-size: 17px;
+			    font-family:Roman;
+			}
+			
+			div .mini{
+			    width: 50px;
+			    height: 50px;
+			    background: #CC66FF;
+			    border: #000 1px solid;
+			    font-size: 12px;
+			    font-family:Roman;
+			}
+			
+			div .mini01{
+			    width: 50px;
+			    height: 50px;
+			    background: #CC66FF;
+			    border: #000 1px solid;
+			    font-size: 12px;
+			    font-family:Roman;
+			}
+			
+	 </style>
+    <script type="text/javascript">
+		$(function () {
+            // <input type="button" value=" 改变 <body> 内所有 <div> 的背景色为红色"  id="b1"/>
+			$("#b1").click(function () {
+				$("body div").css("backgroundColor","pink");
+            });
+            // <input type="button" value=" 改变 <body> 内子 <div> 的背景色为 红色"  id="b2"/>
+            $("#b2").click(function () {
+                $("body > div").css("backgroundColor","pink");
+            });
+
+        });
+
+	</script>
+   
+	</head>
+	 
+	<body>
+				
+		 <input type="button" value="保存"  class="mini" name="ok"  class="mini" />
+		 <input type="button" value=" 改变 <body> 内所有 <div> 的背景色为红色"  id="b1"/>
+		 <input type="button" value=" 改变 <body> 内子 <div> 的背景色为 红色"  id="b2"/>
+		
+ 
+		 <h1>有一种奇迹叫坚持</h1>
+		 <h2>自信源于努力</h2>
+		 
+	     <div id="one">
+	    	 id为one  
+		     
+		 </div>
+		
+		 <div id="two" class="mini" >
+	    	   id为two   class是 mini 
+		       <div  class="mini" >class是 mini</div>
+		</div>
+		
+		 <div class="one" >
+		 	    class是 one 
+		       <div  class="mini" >class是 mini</div>
+			   <div  class="mini" >class是 mini</div>
+		 </div>
+		 <div class="one">
+		 	  class是 one 
+		       <div  class="mini01" >class是 mini01</div>
+			   <div  class="mini" >class是 mini</div>
+		</div>
+		
+		
+		<span class="spanone">    span
+		</span>
+		
+	</body>
+	
+	
+</html>
+
+
+

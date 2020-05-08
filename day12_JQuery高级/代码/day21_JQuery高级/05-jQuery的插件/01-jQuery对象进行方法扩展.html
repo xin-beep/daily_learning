@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>01-jQuery对象进行方法扩展</title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+       //使用jquery插件 给jq对象添加2个方法 check()选中所有复选框，uncheck()取消选中所有复选框
+        
+        
+        //1.定义jqeury的对象插件
+        $.fn.extend({
+            //定义了一个check()方法。所有的jq对象都可以调用该方法
+            check:function () {
+               //让复选框选中
+
+                //this:调用该方法的jq对象
+                this.prop("checked",true);
+            },
+            uncheck:function () {
+                //让复选框不选中
+
+                this.prop("checked",false);
+            }
+            
+        });
+
+        $(function () {
+           // 获取按钮
+            //$("#btn-check").check();
+            //复选框对象.check();
+
+            $("#btn-check").click(function () {
+                //获取复选框对象
+                $("input[type='checkbox']").check();
+
+            });
+
+            $("#btn-uncheck").click(function () {
+                //获取复选框对象
+                $("input[type='checkbox']").uncheck();
+
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+<input id="btn-check" type="button" value="点击选中复选框" onclick="checkFn()">
+<input id="btn-uncheck" type="button" value="点击取消复选框选中" onclick="uncheckFn()">
+<br/>
+<input type="checkbox" value="football">足球
+<input type="checkbox" value="basketball">篮球
+<input type="checkbox" value="volleyball">排球
+
+</body>
+</html>
+
